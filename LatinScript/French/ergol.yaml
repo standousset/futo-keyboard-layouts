@@ -1,4 +1,4 @@
-name: Ergo-l
+name: Ergo-L
 languages : fr
 rows:
   - letters:
@@ -8,8 +8,20 @@ rows:
       - {type: case, normal: [p, "ô", "$"]}
       - {type: case, normal: [w, "%"]}
       - {type: case, normal: [j, "@"]}
-      - {type: case, normal: [m, "µ", &"]}
+      - {type: case, normal: [m, "µ", "&"]}
       - {type: case, normal: [d, "_", "*"]}
+      - {
+              type: base,
+              spec: "\u2605|!code/key_to_alt_0_layout",
+              attributes:
+                &functional {
+                    width: FunctionalKey,
+                    style: Functional,
+                    anchored: true,
+                    showPopup: false,
+                    labelFlags: { followKeyLetterRatio: false }
+                },
+          }
       - {type: case, normal: [’, "¨", "'"]}
       - {type: case, normal: [y, "û", "`"]}
       - "$delete"
@@ -43,3 +55,39 @@ rows:
         fallbackKey: ","
       - $action
       - $space
+
+
+altPages:
+    -     - letters:
+                - "à"
+                - "é"
+                - "ê"
+                - "ê"
+                - "ñ"
+                - "$gap"
+                - "+"
+                - "-"
+                - "/"
+                - "\""
+          - letters:
+                - "$gap"
+                - "$gap"
+                - "ɪ"
+                - "ʏ"
+                - "$gap"
+                - "ɪ̈"
+                - "ʊ̈"
+                - "$gap"
+                - "ɯ̽"
+                - "ʊ"
+          - letters:
+                - "$gap"
+                - "e"
+                - "ø"
+                - "$gap"
+                - "ɘ"
+                - "ɵ"
+                - "$gap"
+                - "ə"
+                - "$gap"
+                - "ɤ"
