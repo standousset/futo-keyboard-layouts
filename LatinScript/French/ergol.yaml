@@ -1,0 +1,45 @@
+name: Ergo-l
+languages : fr
+rows:
+  - letters:
+      - {type: case, normal: [q, "â", "^"]}
+      - {type: case, normal: [c, "ç", "<"]}
+      - {type: case, normal: [o, "œ", ">"]}
+      - {type: case, normal: [p, "ô", "$"]}
+      - {type: case, normal: [w, "%"]}
+      - {type: case, normal: [j, "@"]}
+      - {type: case, normal: [m, "µ", &"]}
+      - {type: case, normal: [d, "_", "*"]}
+      - {type: case, normal: [’, "¨", "'"]}
+      - {type: case, normal: [y, "û", "`"]}
+      - "$delete"
+  - letters:
+      - {type: case, normal: [a, "à", "{"]}
+      - {type: case, normal: [s, "é", "("]}
+      - {type: case, normal: [n, "ê", ")"]}
+      - {type: case, normal: [e, "è", "}"]}
+      - {type: case, normal: [f, "ñ", "="]}
+      - {type: case, normal: [l, "(", "\\"]}
+      - {type: case, normal: [r, ")", "+"]}
+      - {type: case, normal: [t, "î", "-"]}
+      - {type: case, normal: [i, "ï", "/"]}
+      - {type: case, normal: [u, "ù", "\""]}
+      - "$enter"
+  - letters:
+      - {type: case, normal: [z, "æ", "~"]}
+      - {type: case, normal: [x, "["]}
+      - {type: case, normal: ["-", "]"]}
+      - {type: case, normal: [v, "_"]}
+      - {type: case, normal: [b, "#"]}
+      - {type: case, normal: [., "…", "|"]}
+      - {type: case, normal: [h, "!"]}
+      - {type: case, normal: [g, ";"]}
+      - {type: case, normal: [","]}
+      - {type: case, normal: [k]}
+      - "$shift"
+  - bottom:
+      - $symbols
+      - type: contextual
+        fallbackKey: ","
+      - $action
+      - $space
