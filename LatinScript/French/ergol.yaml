@@ -1,18 +1,141 @@
 name: Ergo-L
 languages : fr
 rows:
+  - numbers:
+      - {type: case, normal: [1, "¼"], shifted: "€"}
+      - {type: case, normal: [2, "⅓"], shifted: "«"}
+      - {type: case, normal: [3, "½"], shifted: "»"}
+      - {type: case, normal: [4, "⅔"], shifted: "$"}
+      - {type: case, normal: [5, "¾"], shifted: "%"}
+      - {type: case, normal: [6], shifted: "^"}
+      - {type: case, normal: [7], shifted: "&"}
+      - {type: case, normal: [8], shifted: "*"}
+      - {type: case, normal: [9], shifted: "#"}
+      - {type: case, normal: [0], shifted: "@"}
   - letters:
-      - {type: case, normal: [q, "â", "^"]}
-      - {type: case, normal: [c, "ç", "<"]}
-      - {type: case, normal: [o, "œ", ">"]}
-      - {type: case, normal: [p, "ô", "$"]}
-      - {type: case, normal: [w, "%"]}
-      - {type: case, normal: [j, "@"]}
-      - {type: case, normal: [m, "µ", "&"]}
-      - {type: case, normal: [d, "_", "*"]}
+      - {type: case, normal: [q]}
+      - {type: case, normal: [c]}
+      - {type: case, normal: [o]}
+      - {type: case, normal: [p]}
+      - {type: case, normal: [w]}
+      - {type: case, normal: [j]}
+      - {type: case, normal: [m]}
+      - {type: case, normal: [d]}
       - {
               type: base,
               spec: "\u2605|!code/key_to_alt_0_layout",
+              attributes:
+                &functional {
+                    width: Regular,
+                    style: MoreKey,
+                    anchored: true,
+                    showPopup: false,
+                    labelFlags: { followKeyLetterRatio: false }
+                }, 
+          }
+      - {type: case, normal: [y]}
+  - letters:
+      - {type: case, normal: [a]}
+      - {type: case, normal: [s]}
+      - {type: case, normal: [e]}
+      - {type: case, normal: [n]}
+      - {type: case, normal: [f]}
+      - {type: case, normal: [l]}
+      - {type: case, normal: [r]}
+      - {type: case, normal: [t, "î", "-"]}
+      - {type: case, normal: [i, "ï", "/"]}
+      - {type: case, normal: [u, "ù", "\""]}
+  - letters:
+      - {type: case, normal: [z, "æ", "~"]}
+      - {type: case, normal: [x, "["]}
+      - {type: case, normal: ["-", "]"], shifted: ["?"]}
+      - {type: case, normal: [v, "_"]}
+      - {type: case, normal: [b, "#"]}
+      - {type: case, normal: [., "…", "|"], shifted: [":"]}
+      - {type: case, normal: [h, "!"]}
+      - {type: case, normal: [g, ";"]}
+      - {type: case, normal: [","], shifted: ";"}
+      - {type: case, normal: [k]}
+  - bottom:
+      - $action
+      - {
+              type: base,
+              spec: "AltGr|!code/key_to_alt_2_layout",
+              attributes:
+                &functional {
+                    width: FunctionalKey,
+                    style: MoreKey,
+                    anchored: true,
+                    showPopup: false,
+                    labelFlags: { followKeyLetterRatio: false }
+                }, 
+          }
+      - $shift
+      - $space
+      - $delete
+      - $enter
+
+
+altPages:
+    -     - numbers:
+                - "„"
+                - "“"
+                - "”"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+          - letters:
+                - "â"
+                - "ç"
+                - "œ"
+                - "ô"
+                - "$gap"
+                - "$gap"
+                - "\u03BC"
+                - "_"
+                - {
+              type: base,
+              spec: "b|!code/key_to_alt_0_layout",
+              attributes:
+                &functional {
+                    width: Regular,
+                    style: Functional,
+                    anchored: true,
+                    showPopup: false,
+                    labelFlags: { followKeyLetterRatio: false }
+                },
+          }
+                - "û"
+          - letters:
+                - "à"
+                - "é"
+                - "è"
+                - "ê"
+                - "ñ"
+                - "$gap"
+                - "+"
+                - "-"
+                - "/"
+                - "\""
+          - letters:
+                - "æ"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "…"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+          - bottom:
+                - {
+              type: base,
+              spec: "\u21E7 Shift|!code/key_to_alt_1_layout",
               attributes:
                 &functional {
                     width: FunctionalKey,
@@ -22,72 +145,121 @@ rows:
                     labelFlags: { followKeyLetterRatio: false }
                 },
           }
-      - {type: case, normal: [’, "¨", "'"]}
-      - {type: case, normal: [y, "û", "`"]}
-      - "$delete"
-  - letters:
-      - {type: case, normal: [a, "à", "{"]}
-      - {type: case, normal: [s, "é", "("]}
-      - {type: case, normal: [n, "ê", ")"]}
-      - {type: case, normal: [e, "è", "}"]}
-      - {type: case, normal: [f, "ñ", "="]}
-      - {type: case, normal: [l, "(", "\\"]}
-      - {type: case, normal: [r, ")", "+"]}
-      - {type: case, normal: [t, "î", "-"]}
-      - {type: case, normal: [i, "ï", "/"]}
-      - {type: case, normal: [u, "ù", "\""]}
-      - "$enter"
-  - letters:
-      - {type: case, normal: [z, "æ", "~"]}
-      - {type: case, normal: [x, "["]}
-      - {type: case, normal: ["-", "]"]}
-      - {type: case, normal: [v, "_"]}
-      - {type: case, normal: [b, "#"]}
-      - {type: case, normal: [., "…", "|"]}
-      - {type: case, normal: [h, "!"]}
-      - {type: case, normal: [g, ";"]}
-      - {type: case, normal: [","]}
-      - {type: case, normal: [k]}
-      - "$shift"
-  - bottom:
-      - $symbols
-      - type: contextual
-        fallbackKey: ","
-      - $action
-      - $space
-
-
-altPages:
+                - {
+              type: base,
+              spec: "apostrophe (’)|’",
+              attributes:
+                &functional {
+                    width: FunctionalKey,
+                    style: Functional,
+                    anchored: true,
+                    showPopup: false,
+                    labelFlags: { followKeyLetterRatio: false }
+                },
+          }
     -     - letters:
-                - "à"
-                - "é"
-                - "ê"
-                - "ê"
-                - "ñ"
+                - "Â"
+                - "Ç"
+                - "Œ"
+                - "Ô"
                 - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+          - letters:
+                - "À"
+                - "É"
+                - "È"
+                - "Ê"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+          - letters:
+                - "Æ"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+          - bottom:
+                - {
+              type: base,
+              spec: "\u21E7 Shifted|!code/key_to_alt_0_layout",
+              attributes:
+                &functional {
+                    width: FunctionalKey,
+                    style: StickyOn,
+                    anchored: true,
+                    showPopup: false,
+                    labelFlags: { followKeyLetterRatio: false }
+                },
+          }
+                - {
+              type: base,
+              spec: "Cancel|!code/key_to_alt_1_layout",
+              attributes:
+                &functional {
+                    width: FunctionalKey,
+                    style: Functional,
+                    anchored: true,
+                    showPopup: false,
+                    labelFlags: { followKeyLetterRatio: false }
+                },
+          }
+    -     - letters:
+                - "^"
+                - "<"
+                - ">"
+                - "$"
+                - "%"
+                - "@"
+                - "&"
+                - "*"
+                - "'"
+                - "`"
+          - letters:
+                - "{"
+                - "("
+                - ")"
+                - "}"
+                - "="
+                - "\\"
                 - "+"
                 - "-"
                 - "/"
                 - "\""
           - letters:
-                - "$gap"
-                - "$gap"
-                - "ɪ"
-                - "ʏ"
-                - "$gap"
-                - "ɪ̈"
-                - "ʊ̈"
-                - "$gap"
-                - "ɯ̽"
-                - "ʊ"
-          - letters:
-                - "$gap"
-                - "e"
-                - "ø"
-                - "$gap"
-                - "ɘ"
-                - "ɵ"
-                - "$gap"
-                - "ə"
-                - "$gap"
-                - "ɤ"
+                - "~"
+                - "["
+                - "["
+                - "]"
+                - "_"
+                - "#"
+                - "|"
+                - "!"
+                - ";"
+                - "?"
+          - bottom:
+                - $gap
+                - {
+              type: base,
+              spec: "AltGr|!code/key_to_alt_2_layout",
+              attributes:
+                &functional {
+                    width: FunctionalKey,
+                    style: StickyOn,
+                    anchored: true,
+                    showPopup: false,
+                    labelFlags: { followKeyLetterRatio: false }
+                },
+          }
+                - $space
