@@ -60,7 +60,7 @@ rows:
       - $action
       - {
               type: base,
-              spec: "AltGr|!code/key_to_alt_2_layout",
+              spec: "\u2604|!code/key_to_alt_2_layout",
               attributes:
                 &functional {
                     width: FunctionalKey,
@@ -99,11 +99,11 @@ altPages:
                 - "_"
                 - {
               type: base,
-              spec: "b|!code/key_to_alt_0_layout",
+              spec: "\u2606|!code/key_to_alt_0_layout",
               attributes:
                 &functional {
                     width: Regular,
-                    style: Functional,
+                    style: MoreKey,
                     anchored: true,
                     showPopup: false,
                     labelFlags: { followKeyLetterRatio: false }
@@ -133,6 +133,8 @@ altPages:
                 - "$gap"
                 - "$gap"
           - bottom:
+                - $gap
+                - $gap
                 - {
               type: base,
               spec: "\u21E7 Shift|!code/key_to_alt_1_layout",
@@ -150,13 +152,16 @@ altPages:
               spec: "apostrophe (’)|’",
               attributes:
                 &functional {
-                    width: FunctionalKey,
+                    width: Grow,
                     style: Functional,
                     anchored: true,
                     showPopup: false,
                     labelFlags: { followKeyLetterRatio: false }
                 },
           }
+                - $gap
+                - $gap
+                - $gap
     -     - letters:
                 - "Â"
                 - "Ç"
@@ -191,6 +196,8 @@ altPages:
                 - "$gap"
                 - "$gap"
           - bottom:
+                - "$gap"
+                - "$gap"
                 - {
               type: base,
               spec: "\u21E7 Shifted|!code/key_to_alt_0_layout",
@@ -203,18 +210,13 @@ altPages:
                     labelFlags: { followKeyLetterRatio: false }
                 },
           }
-                - {
-              type: base,
-              spec: "Cancel|!code/key_to_alt_1_layout",
-              attributes:
-                &functional {
-                    width: FunctionalKey,
-                    style: Functional,
-                    anchored: true,
-                    showPopup: false,
-                    labelFlags: { followKeyLetterRatio: false }
-                },
-          }
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
     -     - letters:
                 - "^"
                 - "<"
@@ -252,7 +254,7 @@ altPages:
                 - $gap
                 - {
               type: base,
-              spec: "AltGr|!code/key_to_alt_2_layout",
+              spec: "\u2604|!code/key_to_alt_2_layout",
               attributes:
                 &functional {
                     width: FunctionalKey,
@@ -262,4 +264,21 @@ altPages:
                     labelFlags: { followKeyLetterRatio: false }
                 },
           }
-                - $space
+                - {
+              type: base,
+              spec: "!icon/tab_key|    ",
+              attributes:
+                &functional {
+                    width: FunctionalKey,
+                    style: StickyOn,
+                    anchored: true,
+                    showPopup: false,
+                    labelFlags: { followKeyLetterRatio: false }
+                },
+          }
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
