@@ -42,25 +42,25 @@ rows:
       - {type: case, normal: [f]}
       - {type: case, normal: [l]}
       - {type: case, normal: [r]}
-      - {type: case, normal: [t, "î", "-"]}
-      - {type: case, normal: [i, "ï", "/"]}
-      - {type: case, normal: [u, "ù", "\""]}
+      - {type: case, normal: [t]}
+      - {type: case, normal: [i]}
+      - {type: case, normal: [u]}
   - letters:
-      - {type: case, normal: [z, "æ", "~"]}
-      - {type: case, normal: [x, "["]}
-      - {type: case, normal: ["-", "]"], shifted: ["?"]}
-      - {type: case, normal: [v, "_"]}
-      - {type: case, normal: [b, "#"]}
-      - {type: case, normal: [., "…", "|"], shifted: [":"]}
-      - {type: case, normal: [h, "!"]}
-      - {type: case, normal: [g, ";"]}
+      - {type: case, normal: [z]}
+      - {type: case, normal: [x]}
+      - {type: case, normal: ["-"], shifted: ["?"]}
+      - {type: case, normal: [v]}
+      - {type: case, normal: [b]}
+      - {type: case, normal: [.], shifted: [":"]}
+      - {type: case, normal: [h]}
+      - {type: case, normal: [g]}
       - {type: case, normal: [","], shifted: ";"}
       - {type: case, normal: [k]}
   - bottom:
       - $action
       - {
               type: base,
-              spec: "\u2604|!code/key_to_alt_2_layout",
+              spec: "AltGr|!code/key_to_alt_2_layout",
               attributes:
                 &functional {
                     width: FunctionalKey,
@@ -115,12 +115,12 @@ altPages:
                 - "é"
                 - "è"
                 - "ê"
-                - "ñ"
                 - "$gap"
-                - "+"
-                - "-"
-                - "/"
-                - "\""
+                - "("
+                - ")"
+                - "î"
+                - "ï"
+                - "ù"
           - letters:
                 - "æ"
                 - "$gap"
@@ -130,7 +130,7 @@ altPages:
                 - "…"
                 - "$gap"
                 - "$gap"
-                - "$gap"
+                - "·"
                 - "$gap"
           - bottom:
                 - $gap
@@ -141,7 +141,7 @@ altPages:
               attributes:
                 &functional {
                     width: FunctionalKey,
-                    style: Functional,
+                    style: StickyOff,
                     anchored: true,
                     showPopup: false,
                     labelFlags: { followKeyLetterRatio: false }
@@ -162,7 +162,18 @@ altPages:
                 - $gap
                 - $gap
                 - $gap
-    -     - letters:
+    -     - numbers:
+                - "$gap"
+                - "‘"
+                - "‘"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+                - "$gap"
+          - letters:
                 - "Â"
                 - "Ç"
                 - "Œ"
@@ -172,7 +183,7 @@ altPages:
                 - "$gap"
                 - "$gap"
                 - "$gap"
-                - "$gap"
+                - "Û"
           - letters:
                 - "À"
                 - "É"
@@ -181,9 +192,9 @@ altPages:
                 - "$gap"
                 - "$gap"
                 - "$gap"
-                - "$gap"
-                - "$gap"
-                - "$gap"
+                - "Î"
+                - "Ï"
+                - "Ù"
           - letters:
                 - "Æ"
                 - "$gap"
@@ -243,22 +254,22 @@ altPages:
                 - "~"
                 - "["
                 - "["
-                - "]"
                 - "_"
                 - "#"
                 - "|"
                 - "!"
                 - ";"
+                - ":"
                 - "?"
           - bottom:
                 - $gap
                 - {
               type: base,
-              spec: "\u2604|!code/key_to_alt_2_layout",
+              spec: "AltGr|!code/key_to_alt_2_layout",
               attributes:
                 &functional {
                     width: FunctionalKey,
-                    style: StickyOn,
+                    style: MoreKey,
                     anchored: true,
                     showPopup: false,
                     labelFlags: { followKeyLetterRatio: false }
@@ -270,7 +281,7 @@ altPages:
               attributes:
                 &functional {
                     width: FunctionalKey,
-                    style: StickyOn,
+                    style: Functional,
                     anchored: true,
                     showPopup: false,
                     labelFlags: { followKeyLetterRatio: false }
