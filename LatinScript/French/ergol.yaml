@@ -116,7 +116,6 @@ altPages:
                 - "è"
                 - "ê"
                 - "$gap"
-                - "$gap"
                 - "("
                 - ")"
                 - "î"
@@ -142,7 +141,7 @@ altPages:
               attributes:
                 &functional {
                     width: FunctionalKey,
-                    style: Functional,
+                    style: StickyOff,
                     anchored: true,
                     showPopup: false,
                     labelFlags: { followKeyLetterRatio: false }
@@ -266,11 +265,11 @@ altPages:
                 - $gap
                 - {
               type: base,
-              spec: "\u2604|!code/key_to_alt_2_layout",
+              spec: "AltGr|!code/key_to_alt_2_layout",
               attributes:
                 &functional {
                     width: FunctionalKey,
-                    style: StickyOn,
+                    style: MoreKey,
                     anchored: true,
                     showPopup: false,
                     labelFlags: { followKeyLetterRatio: false }
@@ -282,7 +281,7 @@ altPages:
               attributes:
                 &functional {
                     width: FunctionalKey,
-                    style: StickyOn,
+                    style: Functional,
                     anchored: true,
                     showPopup: false,
                     labelFlags: { followKeyLetterRatio: false }
